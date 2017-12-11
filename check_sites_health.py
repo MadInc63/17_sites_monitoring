@@ -14,7 +14,7 @@ def arg_parser():
 def load_urls4check(path):
     with open(path, encoding='utf-8') as urls_file:
         for url_string in urls_file:
-            yield url_string.strip()
+            yield url_string.rstrip('\n')
 
 
 def is_server_respond_with_200(verifiable_url):
