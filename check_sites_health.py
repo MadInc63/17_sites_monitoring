@@ -20,7 +20,7 @@ def load_urls4check(path):
 def is_server_respond_with_200(verifiable_url):
     try:
         response = requests.get(verifiable_url)
-        if response.status_code == 200:
+        if response.ok:
             return True
     except requests.exceptions.RequestException:
         return False
