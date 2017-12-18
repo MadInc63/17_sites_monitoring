@@ -22,7 +22,7 @@ def is_server_respond_with_200(verifiable_url):
         response = requests.get(verifiable_url)
         if response.status_code == 200:
             return True
-    except requests.exceptions.ConnectionError:
+    except requests.exceptions.RequestException:
         return False
 
 
