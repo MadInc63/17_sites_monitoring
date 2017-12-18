@@ -43,7 +43,7 @@ if __name__ == '__main__':
             delta = domain_expiration_date - current_date
             if delta.days > 30:
                 print(url)
-                print('Responce '
+                print('Response '
                       'from URL: {}'.format(response_200))
                 print('Expiration date: {}'.format(domain_expiration_date))
                 print('Days before expiration: {}'.format(delta.days))
